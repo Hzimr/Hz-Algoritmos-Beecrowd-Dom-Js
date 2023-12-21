@@ -1,50 +1,9 @@
-'use client'
 import { CategoriesList } from "@/components/constants/data"
-import styled from "styled-components"
-
-const Header = styled.header`
-  display: flex;
-  background: var(--primary-color);
-`
-
-const MainContent = styled.main`
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  background-color: var(--primary-container);
-`
-
-const ContentDiv = styled.div`
-  display: flex;
-  height: 100%;
-  align-items: center;
-  justify-content: center;
-`
-
-const CategoriesDiv = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0.5rem;
-  gap: 1rem;
-  flex-wrap: wrap;
-  color: white;
-  width: 1440px;
-  background-color: var(--on-primary-container);
-`
-
-const CategorieCard = styled.button`
-  display: flex;
-  padding: 1rem;
-  gap: 0.5rem;
-  background-color: ${props => props.color};
-  width: 25rem;
-`
 
 const handleRenderizeListCategories = () => {
   return CategoriesList.map(category => {
     return (
-      <CategorieCard key={category.id} color={category.backgroundColor} >
+      <button className={`${category.backgroundColor} flex p-4 gap-2 w-96 }`} key={category.id} >
         <div>
           {category.id}
         </div>
@@ -59,22 +18,22 @@ const handleRenderizeListCategories = () => {
             {category.solutions}
           </div>
         </div>
-      </CategorieCard >
+      </button >
     )
   })
 }
 
 export default function Home() {
   return (
-    <MainContent>
-      <Header>
+    <main className="flex flex-col h-screen bg-primaryColor-container">
+      <header className="flex bg-primaryColor-primary">
           Header
-      </Header>
-      <ContentDiv className="font-serif">
-        <CategoriesDiv>
+      </header>
+            <div className="flex h-full items-center justify-center font-serif">
+        <div className="flex items-center justify-center p-2 gap-4 flex-wrap text-white w-[1440px] bg-primaryColor-onContainer">
           {handleRenderizeListCategories()}
-        </CategoriesDiv>
-      </ContentDiv>
-    </MainContent>
+        </div>
+      </div>
+    </main>
   )
 }

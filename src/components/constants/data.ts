@@ -1,67 +1,74 @@
 
+export interface ItemList {
+  id: number
+  name: string
+  problems: string
+  solutions: string
+  backgroundColor: string
+}
 
-export const CategoriesList = [
+export const CategoriesList: ItemList[] = [
   {
     id: 1,
     name: "BEGGINNER",
     problems: "336 Problems",
     solutions: "0 Problems",
-    backgroundColor: "#1abc9c"
+    backgroundColor: 'bg-buttonListColor-1'
   },
   {
     id: 2,
     name: "AD-HOC",
     problems: "850 Problems",
     solutions: "0 Problems",
-    backgroundColor: "#F3A01B"
+    backgroundColor: 'bg-buttonListColor-2'
   },
   {
     id: 3,
     name: "STRINGS",
     problems: "148 Problems",
     solutions: "0 Problems",
-    backgroundColor: "#52AF18"
+    backgroundColor: 'bg-buttonListColor-3'
   },
   {
     id: 4,
     name: "DATA STRUCTURES AND LIBRARIES",
     problems: "179 Problems",
     solutions: "0 Problems",
-    backgroundColor: "#E74D3E"
+    backgroundColor: 'bg-buttonListColor-4'
   },
   {
     id: 5,
     name: "MATHEMATICS",
     problems: "269 Problems",
     solutions: "0 Problems",
-    backgroundColor: "#8F8372"
+    backgroundColor: 'bg-buttonListColor-5'
   },
   {
     id: 6,
     name: "PARADIGMS",
     problems: "215 Problems",
     solutions: "0 Problems",
-    backgroundColor: "#9B59B6"
+    backgroundColor: 'bg-buttonListColor-6'
   },
   {
     id: 7,
     name: "GRAPH",
     problems: "277 Problems",
     solutions: "0 Problems",
-    backgroundColor: "#EF6EA3"
+    backgroundColor: 'bg-buttonListColor-7'
   },
   {
     id: 8,
     name: "COMPUTATIONAL GEOMETRY",
     problems: "83 Problems",
     solutions: "0 Problems",
-    backgroundColor: "#34495E"
+    backgroundColor: 'bg-buttonListColor-8'
   },
   {
     id: 9,
     name: "SQL",
     problems: "50 Problems",
     solutions: "0 Problems",
-    backgroundColor: "#1F78A2"
+    backgroundColor: 'bg-buttonListColor-9'
   }
 ]
